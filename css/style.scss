@@ -1,0 +1,88 @@
+@import "./variables";
+@import "./body-layout";
+@import "./media";
+
+*{@include layout-set;}
+
+body{font-family: $myfont}
+
+.mybtn{
+    padding: 10px 30px;
+    color: #ffffff;
+    background-color: $primarycolor;
+    outline: none;
+    border: none;
+    transition: transform 1s;
+}
+
+.mybtn:hover{
+    transform: scale(0.9, 0.9);
+}
+
+.send-btn{
+    @extend .mybtn;
+    background-color: $secondarycolor;
+}
+
+.form-back{background-color: transparent; outline: none !important;}
+.form-back:focus{border-color: $secondarycolor; outline: none !important; color: inherit !important; background-color: inherit !important; box-shadow: none !important;}
+
+.navbtn{
+    padding: 10px 10px;
+    color: #ffffff;
+    background-color: $primarycolor;
+    outline: none;
+    border: none;
+}
+
+footer{
+    background-color: #220000;
+    color: #ffffff;
+}
+
+.navacolor{
+    color: #220000;
+    &:hover{
+        color: $primarycolor;
+    }
+}
+
+.c-page-grid{display: grid; grid-template-columns: 20px auto; column-gap: 40px;}
+
+.c-pageheading{color: $secondarycolor;}
+
+.cpage-img{width: 20px; height: 20px;}
+
+.scolor{color: $secondarycolor;}
+
+.imgwh{width: 100px; height: 120px;}
+
+.work-img{
+    width: 300px; 
+}
+
+.img-hov:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    z-index: 0;
+    display: none;
+}
+
+.img-hov:hover::after{display: block; animation-name: htod; animation-duration: 1.3s;}
+
+.a-stack{z-index: 1;}
+
+div.img-hov a{display: none;}
+
+div.img-hov:hover a{display: block; animation-name: htod; animation-duration: 1.4s;}
+
+@keyframes htod{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+

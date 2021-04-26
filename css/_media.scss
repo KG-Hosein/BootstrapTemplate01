@@ -1,0 +1,32 @@
+@media screen and (min-width: 768px) and (max-width: 992px){
+    .respon{margin: auto;}
+    }
+        
+@media screen and (min-width: 768px){
+    .respon1:hover{
+        transform: translateY(5px);
+        }
+    }
+
+@media screen and (max-width:500px) {
+    .respon2{padding: 0 !important;}
+}
+
+@media screen and (max-width:300px) {
+    .respon2{padding: 0 !important;}
+    .respon5{order: 1;}
+    .respon6{order: 2;}
+
+}
+
+@media screen and (min-width: 992px){
+    .respon3{margin: auto;}
+}
+
+@media screen and (max-width:992px){
+    .respon4{margin-top: 30px;}    
+}
+
+@media screen and (max-width: 770px){
+    .respon7{margin-top: 0 !important;}
+}
